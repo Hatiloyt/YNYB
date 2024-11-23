@@ -171,14 +171,17 @@
 </div>
 
 <script>
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('.content');
+    
+    navLinks = document.querySelectorAll('.nav-link');
+    
+    sections = document.querySelectorAll('.content');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', 
+                              (e) {
             e.preventDefault();
-            const target = this.getAttribute('data-target');
 
+            
             sections.forEach(section => {
                 section.classList.remove('active');
             });
